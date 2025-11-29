@@ -205,13 +205,13 @@ ng serve -o
 
 ## Build de produccion
 ```bash
-- ng build
+ng build
 ```
 
 
 ## Despliegue a Firebase
 ```bash
-- firebase deploy
+firebase deploy
 ```
 
 
