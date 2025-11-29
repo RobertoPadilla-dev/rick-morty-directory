@@ -196,19 +196,24 @@ Siguientes mejoras con IA:
 ## Instalación y ejecución
 
 ```bash
--git clone https://github.com/RobertoPadilla-dev/rick-morty-directory.git
+git clone https://github.com/RobertoPadilla-dev/rick-morty-directory.git
 cd rick-morty-directory
 npm install
 ng serve -o
 ```
 
+
 ## Build de produccion
+```bash
 - ng build
+```
 
 
 ## Despliegue a Firebase
+```bash
 - firebase deploy
- 
+```
+
 
 ## Buenas prácticas aplicadas
 
