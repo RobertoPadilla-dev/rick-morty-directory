@@ -1,0 +1,18 @@
+<h1>Directorio Rick & Morty</h1>
+
+<div *ngIf="loading">Cargando personajes...</div>
+<div *ngIf="error">Error al cargar personajes</div>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <button routerLink="/favorites">⭐ Ver Favoritos</button>
+</div>
+
+
+<div class="grid" *ngIf="!loading && !error">
+  <div class="card" *ngFor="let c of characters">
+    <img [src]="c.image">
+    <h3>{{ c.name }}</h3>
+    <p>{{ c.species }}</p>
+    <button (click)="goToDetail(c.id)">Ver detalle</button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<a routerLink="/">⬅ Volver</a>
+
+<h1>⭐ Favoritos</h1>
+
+<div *ngIf="favorites.length === 0">
+  No tienes personajes favoritos aún.
+</div>
+
+<div class="grid">
+  <div class="card" *ngFor="let character of favorites">
+    <img [src]="character.image">
+    <h3>{{ character.name }}</h3>
+
+    <button [routerLink]="['/character', character.id]">
+      Ver detalle
+    </button>
+
+    <button class="remove" (click)="removeFavorite(character.id)">
+      Quitar
+    </button>
+  </div>
+</div>

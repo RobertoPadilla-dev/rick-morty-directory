@@ -1,0 +1,29 @@
+<a routerLink="/">⬅ Volver</a>
+
+<div *ngIf="loading">Cargando detalle...</div>
+
+<div *ngIf="character" class="detail-container">
+
+  <img [src]="character.image">
+
+  <div class="info">
+    <h2>{{ character.name }}</h2>
+    <p><b>Status:</b> {{ character.status }}</p>
+    <p><b>Species:</b> {{ character.species }}</p>
+    <p><b>Gender:</b> {{ character.gender }}</p>
+    <p><b>Location:</b> {{ character.location.name }}</p>
+
+    <button (click)="toggleFavorite()">
+      {{ isFavorite() ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }}
+    </button>
+  </div>
+
+</div>
+
+<h3>Episodios</h3>
+
+<ul>
+  <li *ngFor="let ep of episodes">
+    {{ ep.episode }} - {{ ep.name }}
+  </li>
+</ul>
